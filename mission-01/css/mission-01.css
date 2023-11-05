@@ -67,6 +67,7 @@
   top: 248px;
   right: 440px;
   border: none;
+  padding: 0;
 }
 
 /* 핸드크림 */
@@ -168,7 +169,7 @@
 }
 
 .teaB-arrow{
-  position: absoolute;
+  position: absolute;
   right: 181px;
   bottom: 20px;
   width: 42px;
@@ -179,6 +180,7 @@
   left:20px;
   bottom: 20px;
   border: none;
+  padding: 0;
 }
 
 /* 박스 위치 조정 */
