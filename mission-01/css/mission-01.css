@@ -28,6 +28,10 @@ body {
   /* box-sizing: border-box; */
 }
 
+.box:hover {
+  border: 1px solid var(--blue-600, #0074E9);
+}
+
 .big-box {
   /* background-color: aqua; */
   width: 502px;
