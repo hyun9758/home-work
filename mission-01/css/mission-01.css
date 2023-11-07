@@ -1,203 +1,118 @@
-/* 박스 정렬 */
+/* 기본 설정 */
 
-.box1 {
-  border: 1px solid var(--gray-500, #C4C4C4);
-  background: var(--White, #FFF);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.wrap {
+  width: 502px;
+  height: 639px;
+  /* background-color: yellow; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* 박스 설정 */
+
+.box {
+  display: flex;
+  position: relative;
+  /* box-sizing: border-box; */
+}
+
+.big-box {
+  /* background-color: aqua; */
   width: 502px;
   height: 310px;
-  position: relative;
-}
-
-.box2 {
+  justify-content: space-between;
+  padding: 20px 28px;
   border: 1px solid var(--gray-500, #C4C4C4);
   background: var(--White, #FFF);
-  width: 243px;
-  height: 310px;
-  position: relative;
 }
 
-.box3 {
-  border: 1px solid var(--gray-500, #C4C4C4);
-  background: var(--White, #FFF);
-  width: 243px;
-  height: 310px;
-  position: relative;
+.box-title {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 55px;
 }
 
-/* 꿀 상품 */
-
-.honey-text {
-  color: var(--gray-800);
+.box-title strong {
+  margin-top: 20px;
+  font-size: 24px;
+  color: var(--gray-800, #4E4E4E);
   text-align: center;
   font-family: Noto Sans;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
-  line-height: 150%;
-  position: absolute;
-  top: 155px;
-  right: 274px;
-  width: 200px;
-  height: 37px;
+  line-height: 150%; /* 36px */
 }
 
-.honey-logo{
-  width: 112px;
-  height: 67px;
-  flex-shrink: 0;
-  position: absolute;
-  top: 75px;
-  right: 317px;
+.small-box {
+  /* background-color: blue; */
+  width: 243px;
+  height: 310px;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid var(--gray-500, #C4C4C4);
+  background: var(--White, #FFF);
 }
 
-.honey-product{
-  width: 222px;
-  height: 270px;
-  flex-shrink: 0;
-  position: absolute;
-  top: 20px;
-  right: 28px;
-}
-
-.honeyB-arrow{
-  width: 42px;
-  height: 42px;
-  flex-shrink: 0;
-  position: absolute;
-  top: 248px;
-  right: 440px;
-  border: none;
-  padding: 0;
-}
-
-/* 핸드크림 */
-
-.handcream-logo{
-  width: 114px;
-  height: 42px;
-  flex-shrink: 0;
-  position: absolute;
-  right: 65px;
-  top: 14px;
-}
-
-.handcream-text {
-  color: var(--grayscale-gray-5, #555);
+.small-box strong {
+  margin-top: 10px;
+  margin-bottom: 7px;
+  color: var(--gray-800, #4E4E4E);
   text-align: center;
   font-family: Noto Sans;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 150%; /* 27px */
-  position: absolute;
-  top: 66px;
-  right: 22px;
-  width: 200px;
-  height: 27px;
+  line-height: 150%; 
 }
 
-.handcream-product {
-  width: 195.005px;
-  height: 196px;
-  flex-shrink: 0;
+.button-set {
   position: absolute;
-  right: 24.99px;
-  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 20px;
+  bottom: 20px;
+  width: 42px;
+  height: 42px;
+  background-color: var(--opacity-20, rgba(0, 0, 0, 0.20));
 }
 
-.buy-text{
+.button-set:hover {
+  display: inline-flex;
+  width: 112px;
+  height: 42px;
+  padding: 12px 18px 13px 20px;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--blue-600, #0074E9);
+}
+
+.button-set:hover::before {
+  content: '구매하기';
   color: var(--White, #FFF);
+
   /* Text/Medium/14 */
   font-family: Noto Sans;
   font-size: 14px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 120%; /* 16.8px */
-}
-
-.button-buy{
-  display: inline-flex;
-  padding: 12px 18px 13px 20px;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  background: var(--blue-600, #0074E9);
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
-}
-
-.handcreamB-arrow {
-  width: 6px;
-  height: 10px;
-  fill: var(--gray-100, #F3F3F3);
-}
-
-/* 보리차 */
-
-.tea-logo{
-  width: 114px;
-  height: 42px;
-  flex-shrink: 0;
-  position: absolute;
-  top: 14px;
-  right: 65px;
-}
-
-.tea-text{
-  color: var(--grayscale-gray-5, #555);
-  text-align: center;
-  font-family: Noto Sans;
-  font-size: 18px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 150%; /* 27px */
-  position: absolute;
-  top: 66px;
-  right: 22px;
-  width: 200px;
-  height: 27px;
-}
-
-.tea-product{
-  width: 195.005px;
-  height: 196px;
-  flex-shrink: 0;
-  position: absolute;
-  top: 100px;
-  right: 24.99px;
-}
-
-.teaB-arrow{
-  position: absolute;
-  right: 181px;
-  bottom: 20px;
-  width: 42px;
-  height: 42px;
-  flex-shrink: 0;
-  fill: var(--opacity-20, rgba(0, 0, 0, 0.20));
-  position: absolute;
-  left:20px;
-  bottom: 20px;
-  border: none;
-  padding: 0;
-}
-
-/* 박스 위치 조정 */
-
-.box1 {
-  position: absolute; /* 절대 위치 지정 */
-  top: 0; /* 맨 위에 위치 */
-  /* 나머지 스타일은 그대로 유지 */
-}
-
-.box2 {
-  position: absolute;
-  top: 320px; /* box1의 height + 간격 등을 고려해 조절 */
-}
-
-.box3 {
-  position: absolute;
-  top: 320px; /* box1의 height + 간격 등을 고려해 조절 */
-  left: 260px; /* box2의 width + 간격 등을 고려해 조절 */
+  line-height: 120%; /* 16.8px */
+  display: inline-block;
 }
