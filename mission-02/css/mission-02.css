@@ -100,65 +100,149 @@ span {
   position: relative;
   box-sizing: border-box;
   flex-flow: column nowrap;
+  margin-top: 100px;
+}
+
+.input-box input {
+  border: none;
+  border-bottom: 1px solid white;
+  background: none;
+}
+
+.input-box {
+  position: relative;
+}
+
+.input-box input {
+  background: none;
 }
 
 .email {
   margin-top: 3px;
-  display: flex;
-  background-color: purple;
+  /* background-color: purple; */
   width: 540px;
+  position: relative;
 }
 
-p {
+.email-input {
+  width: 540px;
+  height: 48px
+}
+
+.email-check {
+  width: 16px;
+  height: 16px;
+  background-color: chocolate;
+  display: block;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  /* background: url(./../images/checkmark.png); */
+}
+
+.input-label {
   color: var(--unnamed, #FEFEFE);
-  text-align: left;
   font-family: San Francisco;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.24px;
-  margin-top: 100px;
-  margin: 0;
+  /* margin-top: 100px; */
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
+
+/* 패스워드 설정 */
 
 .password {
   margin-top: 31px;
-  background-color: aqua;
+  /* background-color: aqua; */
   width: 540px;
 }
 
+.password-input {
+  width: 540px;
+  height: 48px
+}
+
+.password-check {
+  width: 16px;
+  height: 16px;
+  background-color: chocolate;
+  display: block;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+
+/* 이메일 저장 */
+
+.save-option {
+  margin-top: 14px;
+}
+
+label {
+  color: var(--unnamed, #FEFEFE);
+  font-family: SpoqaHanSans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.24px; 
+  margin-left: 20px;
+}
+
 .email-save{
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
 }
 
 /* 로그인 버튼 */
 
-.login-button{
+.ediya-button{
   display: flex;
   position: relative;
   box-sizing: border-box;
   flex-flow: row nowrap;
+  margin-top: 70px;
 }
 
 .signup-button{
   margin-left: 21px;
 }
 
-/* */
+/* 이메일 input 설정 */
 
-.is--invalid .form-message {
-
+.is--focus .email-check {
 }
 
-.is--valid .button-password {
-
+.is--invalid .email-check {
+background: url(./../images/warning.png);
 }
 
-.is--visible .button-password {
-
+.is--valid .email-check {
+  background: url(./../images/checkmark.png)
 }
 
-.is--focus .form-input {
+/* 패스워드 input 설정 */
 
+.is--focus .password-check {
+}
+
+.is--hidden .password-check {
+  background: url(./../images/open-eye.png);
+}
+
+.is--visible .password-check {
+  background: url(./../images/closed-eye.png)
+}
+
+.is--invalid .password-check {
+  background: url(./../images/warning.png);
 }
